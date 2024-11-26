@@ -1,26 +1,55 @@
 .popup {
-    background-color: rgb(0, 0, 0, .7);
+    background-color: rgba(0, 0, 0, 0.7);
     position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    z-index: 3;
-    display: none;
+    z-index: 1000;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 .popup_open {
-    display: block;
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup__content {
+    position: relative;
+    max-width: 60%;
+    background: transparent;
+    margin: 15% auto;
+    border: transparent;
+    max-height: 70vh;
+}
+
+.popup__body {
+    background: transparent;
 }
 
 .popup__container {
-    position: relative;
-    width: 45%;
-    height: 60%;
-    margin: 10% auto;
+    width: 100%;
+}
+
+.popup__title {
+    color: black;
+    font-size: 24px;
+    background-color: white;
+    font-family: "Inter-Black";
+    padding-top: 30px;
+    width: 70%;
+    justify-content: center;
+    display: flex;
+    margin: auto;
+    border-radius: 20px 20px 0 0;
+
 }
 
 .popup__photo {
-    width: 100%;
-    height: 100%;
+    width: 80%;
+    height: 60vh;
 }
 
 .popup__close {
@@ -28,7 +57,7 @@
     height: 40px;
     position: absolute;
     top: -40px;
-    right: -50px;
+    right: 5px;
     border: 0;
 }
 
@@ -45,29 +74,17 @@
 }
 
 
+
 .form {
-    max-width: 430px;
     background-color: white;
-    border-radius: 15px 15px 15px 15px;
     display: grid;
     gap: 1em;
     place-items: center;
     margin: auto;
-    margin-top: 10%;
-    position: relative;
+    width: 70%;
+    border-radius: 0 0 20px 20px;
 }
 
-
-
-.form__title {
-    color: black;
-    font-size: 24px;
-    background-color: white;
-    font-family: "Inter-Black";
-    margin: 0 20px 20px;
-    padding-top: 30px;
-
-}
 
 .form__input {
     background-color: white;
