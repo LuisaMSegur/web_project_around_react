@@ -12,7 +12,6 @@ export default function Main({
   cards,
   onCardLike,
   onCardDelete,
-  // handleOpenPopup,
   onAddPlaceSubmit,
   onOpenPopup,
   onClosePopup,
@@ -80,7 +79,6 @@ export default function Main({
       </ul>
       {popup && (
         <Popup onClose={onClosePopup} title={popup.title} >
-          {console.log("Renderizando Popup", popup)}
           {popup.content}
         </Popup>
       )}
