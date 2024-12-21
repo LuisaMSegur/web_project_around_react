@@ -16,15 +16,16 @@ const cardLikeButtonClassName = `card__button-love ${
 function handleDeleteClick() {
   onCardDelete(card); 
 }
+
   return (
     <li className="card">
       <img
         className="card__photo"
         src={card.link}
         alt={card.name}
-        onClick={() => handleOpenPopup({ 
-          title: null, 
-          children: <ImagePopup card={card} /> 
+        onClick={() => handleOpenPopup({
+          title: null,
+          content: <ImagePopup card={card} />,
         })}
       />
       {isOwner && (<button

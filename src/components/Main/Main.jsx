@@ -12,6 +12,7 @@ export default function Main({
   cards,
   onCardLike,
   onCardDelete,
+  // handleOpenPopup,
   onAddPlaceSubmit,
   onOpenPopup,
   onClosePopup,
@@ -21,6 +22,7 @@ export default function Main({
 }) {
   const { currentUser } = useContext(CurrentUserContext);
   
+ 
   const newCardPopup = { title: "Nuevo lugar", content: <NewCard
     onAddPlaceSubmit={(name, link) => {
       return onAddPlaceSubmit(name, link).then(() => onClosePopup());
@@ -32,7 +34,7 @@ export default function Main({
   };
   const editAvatarPopup = { title: "Editar Avatar", content: <EditAvatar onUpdateAvatar={onUpdateAvatar} loading={loading} /> };
 
-
+ 
 
   return (
     <main className="content">
@@ -72,6 +74,7 @@ export default function Main({
             card={card}
             onCardLike={onCardLike}
             onCardDelete={onCardDelete}
+            handleOpenPopup={onOpenPopup}
           />
         ))}
       </ul>
